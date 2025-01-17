@@ -150,6 +150,14 @@ if st.session_state["page"] == "welcome":
     st.title("Selamat Datang di Aplikasi Tabel Periodik Sederhana")
     st.markdown("""
         <div class="card card-blue">
+        <h2>Pendahuluan</h2>
+        <p>
+        Aplikasi web tabel periodik sederhana memberikan informasi tentang simbol, nomor atom, 
+        dan nomor massa dari suatu unsur. Kimia mempelajari sifat, struktur, komposisi, susunan, 
+        dan perubahan materi. Unsur kimia menjadi dasar semua reaksi kimia dan pembentukan senyawa. 
+        Tabel periodik mengatur unsur-unsur kimia menurut nomor atom dan kesamaan sifat kimianya. 
+        Melalui aplikasi ini, Anda dapat dengan mudah mencari data terkait unsur-unsur kimia secara cepat.
+        </p>
         <h3>Tujuan Pembuatan:</h3>
         <ul>
             <li>Memberikan informasi dasar tentang unsur-unsur kimia.</li>
@@ -173,6 +181,9 @@ elif st.session_state["page"] == "table":
             st.markdown(f'<div class="card card-green"><strong>Simbol Unsur:</strong> {data["simbol"]}</div>', unsafe_allow_html=True)
             st.markdown(f'<div class="card card-orange"><strong>Nomor Atom:</strong> {data["nomor_atom"]}</div>', unsafe_allow_html=True)
             st.markdown(f'<div class="card card-blue"><strong>Nomor Massa:</strong> {data["nomor_massa"]}</div>', unsafe_allow_html=True)
+            
+            # Efek balon
+            st.balloons()
         else:
             st.error("Unsur tidak ditemukan. Harap masukkan nama unsur yang benar.")
         
